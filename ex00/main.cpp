@@ -6,28 +6,28 @@ int main() {
 		int a = 21;
 		int b = 42;
 
-		::swap(a, b);
+		::swap<int>(a, b);
 		std::cout << "a = " << a << "\nb = " << b << std::endl;
-		std::cout << "min = " << ::min(a, b) << std::endl;
-		std::cout << "max = " << ::max(a, b) << std::endl;
+		std::cout << "min = " << ::min<int>(a, b) << std::endl;
+		std::cout << "max = " << ::max<int>(a, b) << std::endl;
 	}
 	{
 		float a = 21.12;
 		float b = 42.24;
 
-		::swap(a, b);
+		::swap<float>(a, b);
 		std::cout << "a = " << a << "\nb = " << b << std::endl;
-		std::cout << "min = " << ::min(a, b) << std::endl;
-		std::cout << "max = " << ::max(a, b) << std::endl;
+		std::cout << "min = " << ::min<float>(a, b) << std::endl;
+		std::cout << "max = " << ::max<float>(a, b) << std::endl;
 	}
 	{
 		std::string a = "a";
 		std::string b = "b";
 
-		::swap(a, b);
+		::swap<std::string>(a, b);
 		std::cout << "a = " << a << "\nb = " << b << std::endl;
-		std::cout << "min = " << ::min(a, b) << std::endl;
-		std::cout << "max = " << ::max(a, b) << std::endl;
+		std::cout << "min = " << ::min<std::string>(a, b) << std::endl;
+		std::cout << "max = " << ::max<std::string>(a, b) << std::endl;
 	}
 }
 
