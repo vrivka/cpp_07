@@ -9,27 +9,24 @@ private:
 	T *array;
 	unsigned int len;
 public:
-
 	unsigned int size() const { return this->len; }
 
 	Array<T>() : array(NULL), len(0) {}
 
-	Array<T>( unsigned int n ) : array(new T[n]()), len(n) {}
+	explicit Array<T>( unsigned int n ) : array(new T[n]()), len(n) {}
 
 	Array<T>( Array<T> const &other ) : len(other.len) {
 		if (other.array) {
 			this->array = new T[other.len]();
-			for (unsigned int i = 0; i < other.len; i++) {
+			for (unsigned int i = 0; i < other.len; i++)
 				this->array[i] = other.array[i];
-			}
 		}
 		else
 			this->array = NULL;
 	}
 
 	~Array<T>() {
-		if (this->array)
-			delete [] this->array;
+		delete [] this->array;
 	}
 
 	Array<T> &operator=( Array<T> const &other ) {
