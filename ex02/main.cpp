@@ -39,7 +39,7 @@ int main() {
 	std::cout << "\n\n";
 	{
 		Array<std::string> b;
-		std::cout << "Let's create an instance of \"Array<int> b\" with empty array\nb.size = " << b.size() << "\nAssign a to b\nNow b.size = " << b.size() << "\nLet's edit array b by adding \" OK!\" at the end\n";
+		std::cout << "Let's create an instance of \"Array<std::string> b\" with empty array\nb.size = " << b.size() << "\nAssign a to b\nNow b.size = " << b.size() << "\nLet's edit array b by adding \" OK!\" at the end\n";
 
 		b = a;
 		for (unsigned int i = 0; i < b.size(); i++)
