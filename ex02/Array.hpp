@@ -25,9 +25,7 @@ public:
 			this->array = NULL;
 	}
 
-	~Array<T>() {
-		delete [] this->array;
-	}
+	~Array<T>() { delete [] this->array; }
 
 	Array<T> &operator=( Array<T> const &other ) {
 		if (this == &other)
@@ -46,6 +44,12 @@ public:
 	}
 
 	T &operator[]( unsigned int idx ) throw (std::exception) {
+		if (idx >= this->len)
+			throw std::exception();
+		return array[idx];
+	}
+
+	T &operator[]( unsigned int idx ) const throw (std::exception) {
 		if (idx >= this->len)
 			throw std::exception();
 		return array[idx];
