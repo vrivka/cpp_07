@@ -36,10 +36,10 @@ public:
 			this->array = new T[other.len]();
 			for (unsigned int i = 0; i < other.len; i++)
 				this->array[i] = other.array[i];
-			this->len = other.len;
 		}
 		else
 			this->array = NULL;
+		this->len = other.len;
 		return *this;
 	}
 
